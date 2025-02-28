@@ -31,6 +31,16 @@ def count_number_of_words(text: str) -> int:
 
 
 def count_number_of_characters(text: str) -> dict:
+    """
+    Given string, count number of occurrences for each unique character.
+
+    Args:
+        text (str): Input string.
+
+    Returns:
+        dict: Dictionary of each unique character that appears in the input string
+            with number of occurrences.
+    """
     lower_text =  text.lower()
     num_char = {}
     for char in lower_text:
