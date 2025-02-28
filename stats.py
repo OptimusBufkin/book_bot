@@ -28,3 +28,14 @@ def count_number_of_words(text: str) -> int:
     """
     text_list = text.split()
     return len(text_list)
+
+
+def count_number_of_characters(text: str) -> dict:
+    lower_text =  text.lower()
+    num_char = {}
+    for char in lower_text:
+        if char not in num_char.keys():
+            num_char[char] = 1
+        else:
+            num_char[char] += 1
+    return num_char
