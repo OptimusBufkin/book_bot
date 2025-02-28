@@ -12,8 +12,11 @@ def get_book_text(path: str) -> str:
     Returns:
         str: Contents of file.
     """
-    with open(path) as f:
-        return f.read()
+    try:
+        with open(path) as f:
+            return f.read()
+    except FileNotFoundError:
+        print("File not found.")
 
 
 def count_number_of_words(text: str) -> int:
