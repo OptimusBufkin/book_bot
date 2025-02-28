@@ -17,7 +17,7 @@ def main():
     for item in sort_chars:
         char_count = list(item.values())
         if char_count[0].isalpha():
-            print(f"{char_count[0]}:{char_count[1]}")
+            print(f"{char_count[0]}: {char_count[1]}")
     print("============= END ===============")
 
 
