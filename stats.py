@@ -49,3 +49,13 @@ def count_number_of_characters(text: str) -> dict:
         else:
             num_char[char] += 1
     return num_char
+
+
+def sort_character_dictionary(char_dict: dict) -> list:
+    char_list = [{"character": x, "count": y} for x, y in char_dict.items()]
+    char_list.sort(reverse=True, key=sort_on)
+    return char_list
+
+
+def sort_on(dict):
+    return dict["count"]
